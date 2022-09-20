@@ -1,2 +1,2 @@
-# fc-onboarding-test
-Cypress ui automation. This will also serve as the repo for integration testing
+# bridge-global
+Cypress API testing

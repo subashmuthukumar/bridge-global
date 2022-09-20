@@ -19,7 +19,7 @@ describe("Test sample API request", () => {
         "data",
         "support"
       );
-      expect
+      
     });
   });
 });
