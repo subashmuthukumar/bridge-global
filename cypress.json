@@ -1,0 +1,18 @@
+{
+  "defaultCommandTimeout": 300000,
+  "pageLoadTimeout": 120000,
+  "screenshotsFolder": "cypress/testScreenshots",
+  "videosFolder": "cypress/videos",
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/report",
+    "charts": true,
+    "reportPageTitle": "brige-global-test",
+    "embeddedScreenshots": true,
+    "html": true
+  },
+  "chromeWebSecurity": false,
+  "e2e": {
+    "baseUrl": "https://reqres.in/"
+  }
+}

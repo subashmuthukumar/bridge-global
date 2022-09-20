@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "cypress": "^9.5.4",
+    "cypress-dotenv": "^2.0.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-otp": "^1.0.3",
+    "cypress-xpath": "^1.6.2"
+  },
+  "scripts": {
+    "runAllHeaded": "npx cypress run --spec 'cypress/integration/ui-tests/UploadTest.js' --browser chrome --headed",
+    "runAllHeadLess": "npx cypress run --spec 'cypress/integration/ui-tests/**'",
+    "runAllApi": "npx cypress run --spec 'cypress/integration/api-tests/**' --browser chrome --headed"
+  }
+}
