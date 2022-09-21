@@ -1,7 +1,6 @@
 /// <reference types="Cypress" />
 describe("Test sample API request", () => {
   var data = require("../../fixtures/api/values/UserList.json");
-  var postRequestBody = require("../../fixtures/api/values/UserRequestBody.json");
 
   beforeEach(function () {
     cy.fixture("UserSpec").then(function (user) {
@@ -37,10 +36,14 @@ describe("Test sample API request", () => {
       expect(this.user.total_pages).eq(2);
     });
   });
-  it("Create a user with POST method", () => {
-    cy.request("POST",JSON.stringify(postRequestBody),"api/users").then((response)=>{
-
-      
+  it("Login with POST method", () => {
+    cy.request({
+      method: "POST",
+      url: "api/login/users",
+      body: { email: Cypress.env("email"), password: Cypress.env("password") },
     })
+    .then((response) => {
+      cy.log(JSON.stringify(response));
+    });
   });
 });

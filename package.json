@@ -8,8 +8,9 @@
     "cypress-xpath": "^1.6.2"
   },
   "scripts": {
-    "runAllHeaded": "npx cypress run --spec 'cypress/integration/ui-tests/UploadTest.js' --browser chrome --headed",
+    "runAllHeaded": "npx cypress run --spec 'cypress/integration/api-tests/spec.cy.js' --browser chrome --headed",
     "runAllHeadLess": "npx cypress run --spec 'cypress/integration/ui-tests/**'",
-    "runAllApi": "npx cypress run --spec 'cypress/integration/api-tests/**' --browser chrome --headed"
+    "runAllApi": "npx cypress run --spec 'cypress/integration/api-tests/**' --browser chrome --headed --record --key 0afee56a-7d3d-464a-a74f-0db28ea64670"
   }
+
 }
