@@ -4,6 +4,7 @@
   "screenshotsFolder": "cypress/testScreenshots",
   "videosFolder": "cypress/videos",
   "reporter": "cypress-mochawesome-reporter",
+  "projectId":"hjx3m9",
   "reporterOptions": {
     "reportDir": "cypress/report",
     "charts": true,
