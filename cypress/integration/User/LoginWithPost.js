@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 describe("Test sample API request", () => {
-  var data = require("../../fixtures/api/values/UserList.json");
-
   beforeEach(function () {
     cy.fixture("UserSpec").then(function (user) {
       this.user = user;

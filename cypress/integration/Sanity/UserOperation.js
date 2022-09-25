@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 describe("Test sample API request", () => {
-  var data = require("../../fixtures/api/values/UserList.json");
+  var data = require("../../fixtures/UserList.json");
 
   beforeEach(function () {
     cy.fixture("UserSpec").then(function (user) {
@@ -41,9 +41,15 @@ describe("Test sample API request", () => {
       url: "api/login/users",
       body: { email: Cypress.env("email"), password: Cypress.env("password") },
     }).then((response) => {
-
       cy.log(JSON.stringify(response));
-      
+    });
+  });
+  it("Delete the user", () => {
+    cy.request({
+      method: "DELETE",
+      url: "api/users/2",
+    }).then((response) => {
+      expect(response.status).to.eq(204);
     });
   });
 });
