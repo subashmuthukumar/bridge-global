@@ -17,13 +17,14 @@
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false;
+  });
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-}
-
-
-
-
+};
 
 // module.exports = on => {
 //   on("task", {
@@ -31,17 +32,12 @@ module.exports = (on, config) => {
 //   });
 // };
 
-
-const dotenvPlugin = require('cypress-dotenv');
+const dotenvPlugin = require("cypress-dotenv");
 module.exports = (on, config) => {
-
   on("task", {
-    generateOTP: require("cypress-otp")
+    generateOTP: require("cypress-otp"),
   });
-  require('cypress-mochawesome-reporter/plugin')(on);
-  config = dotenvPlugin(config)
-  return config
-
-  
-}
-
+  require("cypress-mochawesome-reporter/plugin")(on);
+  config = dotenvPlugin(config);
+  return config;
+};

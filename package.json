@@ -11,6 +11,6 @@
     "runAllHeaded": "npx cypress run --spec 'cypress/integration/api-tests/spec.cy.js' --browser chrome --headed",
     "runAllHeadLess": "npx cypress run --spec 'cypress/integration/ui-tests/**'",
     "runAllApi": "npx cypress run --spec 'cypress/integration/**' --browser chrome --headed --record --key 0afee56a-7d3d-464a-a74f-0db28ea64670",
-    "runSanity": "npx cypress run --spec 'cypress/integration/**'"
+    "runSanity": "npx cypress run --spec 'cypress/integration/sanity**'"
   }
 }
